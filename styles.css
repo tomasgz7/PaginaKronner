@@ -60,6 +60,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Sección de la descripción (lado izquierdo) */
 .description {
     width: 60%;
@@ -131,6 +132,8 @@ h1 {
     transform: scale(1.2); /* Mini-zoom al pasar el cursor */
 }
 
+
+
 /* Sección "¿Por qué elegirnos?" */
 .why-choose-us {
     text-align: center;
@@ -189,4 +192,36 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
+}
+
+/* Servicio Titulos */
+/* Estilos para la imagen de portada */
+.portada {
+    position: relative;
+    height: 875px; /* Tamaño de la portada: toda la altura de la ventana */
+    background-image: url('images/Portada\ Servicios.png'); /* Cambia 'tu-imagen.jpg' por la ruta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: -80px;
+}
+
+.portada-conteiner {
+            
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente detrás del texto */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.portada h1 {
+    font-size: 140px;
+    margin-bottom: 20px;
+}
+
+.portada p {
+    font-size: 1.5rem;
 }

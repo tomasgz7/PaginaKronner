@@ -1,3 +1,6 @@
+
+
+
 // Seleccionar el formulario
 const inform = document.getElementById('inform');
 
@@ -6,9 +9,11 @@ inform.addEventListener('submit', function(event) {
     event.preventDefault(); // Evitar que el formulario se envíe de manera predeterminada
 
     // Obtener los valores de usuario y contraseña
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
+    
     // Aquí puedes hacer lo que necesites con los datos, como validaciones o enviarlos a un servidor
     console.log('name:', name);
     console.log('email:', email);
