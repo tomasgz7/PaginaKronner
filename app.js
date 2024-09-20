@@ -1,28 +1,32 @@
+const inform = document.getElementById("inform");
 
+inform.addEventListener("submit", function (event) {
+  event.preventDefault();
 
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-// Seleccionar el formulario
-const inform = document.getElementById('inform');
+  const formData = {
+    to: email,
+    subject: `Nuevo mensaje de ${name}`,
+    text: message,
+  };
 
-// Agregar el evento para capturar los datos cuando el usuario envíe el formulario
-inform.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar que el formulario se envíe de manera predeterminada
-
-    // Obtener los valores de usuario y contraseña
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    
-    // Aquí puedes hacer lo que necesites con los datos, como validaciones o enviarlos a un servidor
-    console.log('name:', name);
-    console.log('email:', email);
-
-    // Ejemplo de validación simple
-    if (username === 'admin' && password === '1234') {
-        alert('Inicio de sesión exitoso');
-    } else {
-        alert('Usuario o contraseña incorrectos');
-    }
+  fetch("http://localhost:3000/send-email", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Éxito:", data);
+      alert("Correo enviado con éxito");
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("Hubo un error al enviar el correo");
+    });
 });
-
