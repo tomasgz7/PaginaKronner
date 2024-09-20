@@ -1,92 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Página Web</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
-</head>
-<body>
-      
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Encabezado y barra de navegación -->
     <header>
-        <nav>
-            <img src="images/logo-mas-chico.png" alt="Logo" class="logo">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>          
-        
+      <nav>
+        <img src="images/logo-mas-chico.png" alt="Logo" class="logo" />
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
-         
+
     <section class="portada">
-        <div class="portada-conteiner">
-            <h1>Nuestros Servicios</h1>
-            <p>Envíos rápidos y flexibles, tanto en CABA como en el GBA.</p>
-        </div>
+      <div class="portada-conteiner">
+        <h1>Nuestros Servicios</h1>
+        <p>Envíos rápidos y flexibles, tanto en CABA como en el GBA.</p>
+      </div>
     </section>
-            
+
     <div class="flex flex-col md:flex-row items-center p-6 bg-background">
-        <div class="md:w-1/2 p-4">
-          <h2 class="text-2xl font-bold text-primary text-red-500">Mercado Envío Flex</h2>
-          <p class="mt-2 text-muted-foreground">
-            Somos especialistas en Mercado Envío Flex, gestionamos tus envíos en el día para que tus ventas en Mercado Libre lleguen rápido y sin complicaciones. Nuestra flota está siempre lista para asegurar que cumplas con las entregas en tiempo récord, mejorando tu reputación como vendedor.
-          </p>
-        </div>
-        <div class="md:w-1/2">
-            <img aria-hidden="true" alt="Kronner logistics" src="images/ServicioUno.png" class="w-[950px] h-[600px] " />
-
-        </div>
+      <div class="md:w-1/2 p-4">
+        <h2 class="text-2xl font-bold text-primary text-red-500">
+          Mercado Envío Flex
+        </h2>
+        <p class="mt-2 text-muted-foreground">
+          Somos especialistas en Mercado Envío Flex, gestionamos tus envíos en
+          el día para que tus ventas en Mercado Libre lleguen rápido y sin
+          complicaciones. Nuestra flota está siempre lista para asegurar que
+          cumplas con las entregas en tiempo récord, mejorando tu reputación
+          como vendedor.
+        </p>
       </div>
-      
-      <div class="flex flex-col md:flex-row items-center p-6 bg-background">  
-        <div class="md:w-1/2 p-4">
-          <h2 class="text-2xl font-bold text-primary text-red-500">Envíos eCommerce</h2>
-          <p class="mt-2 text-muted-foreground">
-            Ofrecemos soluciones logísticas para eCommerce. Realizamos la gestión integral de tus pedidos, desde la recogida en depósito hasta la entrega en manos de tus clientes. Ideal para tiendas online que necesitan un aliado confiable para manejar sus despachos en CABA y GBA.
-          </p>
-        </div>
-        <div class="md:w-1/2">
-            <img aria-hidden="true" alt="Kronner logistics" src="images/ServicioDos.png" class="w-[950px] h-[600px] " />
-
-        </div>
+      <div class="md:w-1/2">
+        <img
+          aria-hidden="true"
+          alt="Kronner logistics"
+          src="images/ServicioUno.png"
+          class="w-[950px] h-[600px]"
+        />
       </div>
+    </div>
 
-      <div class="flex flex-col md:flex-row items-center p-6 bg-background">  
-        <div class="md:w-1/2 p-4">
-          <h2 class="text-2xl font-bold text-primary text-red-500">Servicio de Mensajería</h2>
-          <p class="mt-2 text-muted-foreground">
-            Brindamos un servicio de mensajería ágil y eficiente. Ya sea para trasladar documentos, gestionar trámites o hacer cobranzas, contamos con motos y personal capacitado para resolver tus necesidades en el menor tiempo posible.
-          </p>
-        </div>
-        <div class="md:w-1/2">
-            <img aria-hidden="true" alt="Kronner logistics" src="images/ServicioTres.png" class="w-[950px] h-[600px] " />
-
-        </div>
+    <div class="flex flex-col md:flex-row items-center p-6 bg-background">
+      <div class="md:w-1/2 p-4">
+        <h2 class="text-2xl font-bold text-primary text-red-500">
+          Envíos eCommerce
+        </h2>
+        <p class="mt-2 text-muted-foreground">
+          Ofrecemos soluciones logísticas para eCommerce. Realizamos la gestión
+          integral de tus pedidos, desde la recogida en depósito hasta la
+          entrega en manos de tus clientes. Ideal para tiendas online que
+          necesitan un aliado confiable para manejar sus despachos en CABA y
+          GBA.
+        </p>
       </div>
-        
-      <div class="flex flex-col md:flex-row items-center p-6 bg-background">  
-        <div class="md:w-1/2 p-4">
-          <h2 class="text-2xl font-bold text-primary text-red-500">Fletes y Mudanzas</h2>
-          <p class="mt-2 text-muted-foreground">
-            Nos adaptamos a tus necesidades de transporte. Ofrecemos fletes y mudanzas para empresas o particulares, con servicios de carga y descarga incluidos. Ya sea un pequeño traslado o una mudanza completa, te garantizamos un servicio seguro y puntual.
-          </p>
-        </div>
-        <div class="md:w-1/2">
-            <img aria-hidden="true" alt="Kronner logistics" src="images/ServicioTres.png" class="w-[950px] h-[600px] " />
-
-        </div>
+      <div class="md:w-1/2">
+        <img
+          aria-hidden="true"
+          alt="Kronner logistics"
+          src="images/ServicioDos.png"
+          class="w-[950px] h-[600px]"
+        />
       </div>
-        
+    </div>
 
-     <!-- Botón de WhatsApp -->
-     <a href="https://wa.me/+5491154273627" class="whatsapp-button" target="_blank">
-        <img src="images/whatsapp.png" alt="WhatsApp">
+    <div class="flex flex-col md:flex-row items-center p-6 bg-background">
+      <div class="md:w-1/2 p-4">
+        <h2 class="text-2xl font-bold text-primary text-red-500">
+          Servicio de Mensajería
+        </h2>
+        <p class="mt-2 text-muted-foreground">
+          Brindamos un servicio de mensajería ágil y eficiente. Ya sea para
+          trasladar documentos, gestionar trámites o hacer cobranzas, contamos
+          con motos y personal capacitado para resolver tus necesidades en el
+          menor tiempo posible.
+        </p>
+      </div>
+      <div class="md:w-1/2">
+        <img
+          aria-hidden="true"
+          alt="Kronner logistics"
+          src="images/ServicioTres.png"
+          class="w-[950px] h-[600px]"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center p-6 bg-background">
+      <div class="md:w-1/2 p-4">
+        <h2 class="text-2xl font-bold text-primary text-red-500">
+          Fletes y Mudanzas
+        </h2>
+        <p class="mt-2 text-muted-foreground">
+          Nos adaptamos a tus necesidades de transporte. Ofrecemos fletes y
+          mudanzas para empresas o particulares, con servicios de carga y
+          descarga incluidos. Ya sea un pequeño traslado o una mudanza completa,
+          te garantizamos un servicio seguro y puntual.
+        </p>
+      </div>
+      <div class="md:w-1/2">
+        <img
+          aria-hidden="true"
+          alt="Kronner logistics"
+          src="images/ServicioTres.png"
+          class="w-[950px] h-[600px]"
+        />
+      </div>
+    </div>
+
+    <!-- Botón de WhatsApp -->
+    <a
+      href="https://wa.me/+5491154273627"
+      class="whatsapp-button"
+      target="_blank"
+    >
+      <img src="images/whatsapp.png" alt="WhatsApp" />
     </a>
-    </body>
-    </html>
+  </body>
+</html>
