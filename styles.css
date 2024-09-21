@@ -40,6 +40,11 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: white;
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+nav ul li a:hover {
+  color: red; /* Cambia a rojo cuando pones el cursor encima */
 }
 
 h1 {
