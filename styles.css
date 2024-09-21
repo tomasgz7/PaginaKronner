@@ -237,3 +237,14 @@ footer {
 .carousel-control-prev-icon {
   display: none !important;
 }
+.resaltar-numero {
+  color: rgb(185, 94, 94);
+
+  text-decoration: none; /* Sin subrayado */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.resaltar-numero:hover {
+  transform: scale(1.1); /* Mini-zoom al poner el cursor */
+  color: darkred; /* Opcional: cambia el color al pasar el mouse */
+}
