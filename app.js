@@ -3,9 +3,9 @@ const inform = document.getElementById("inform");
 inform.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const name = document.getElementById("name").value;
+  const name = document.getElementById("nombre").value;
   const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+  const message = document.getElementById("mensaje").value;
 
   const formData = {
     to: email,
