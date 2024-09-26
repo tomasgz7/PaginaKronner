@@ -203,7 +203,7 @@ footer {
 .portada {
   position: relative;
   height: 875px; /* Tamaño de la portada: toda la altura de la ventana */
-  background-image: url("images/Portada\ Servicios.png"); /* Cambia 'tu-imagen.jpg' por la ruta de tu imagen */
+  background-image: url("images/servicioportada.jpg"); /* Cambia 'tu-imagen.jpg' por la ruta de tu imagen */
   background-size: cover; /* Asegura que la imagen cubra toda la sección */
   background-position: center;
   display: flex;
