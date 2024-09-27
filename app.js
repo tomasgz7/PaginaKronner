@@ -8,9 +8,9 @@ inform.addEventListener("submit", function (event) {
   const message = document.getElementById("mensaje").value;
 
   const formData = {
-    to: email,
-    subject: `Nuevo mensaje de ${name}`,
-    text: message,
+    name,
+    email,
+    message,
   };
 
   fetch("http://localhost:3000/send-email", {
