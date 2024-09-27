@@ -3,14 +3,14 @@ const inform = document.getElementById("inform");
 inform.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const name = document.getElementById("nombre").value;
+  const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
-  const message = document.getElementById("mensaje").value;
+  const message = document.getElementById("message").value;
 
   const formData = {
-    name,
-    email,
-    message,
+    to: email,
+    subject: `Nuevo mensaje de ${name}`,
+    text: message,
   };
 
   fetch("http://localhost:3000/send-email", {
