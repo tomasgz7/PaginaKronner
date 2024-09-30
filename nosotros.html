@@ -3,29 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros - Kronner</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="/images/Imagen de WhatsApp 2024-09-19 a las 10.35.37_2a282437.jpg"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
   <body class="bg-black">
     <!-- Encabezado y barra de navegación -->
-
-    <header>
-      <nav>
-        <a
-          href="index.html"
-          class="block transition-transform duration-300 hover:scale-105"
-        >
-          <img src="images/logo-mas-chico.png" alt="Logo" class="logo" />
+    <header class="bg-black">
+      <nav class="bg-black mx-auto flex justify-between items-center p-4">
+        <!-- Logo a la izquierda -->
+        <a href="index.html" class="flex-shrink-0">
+          <img src="images/logo-mas-chico.png" alt="Logo" class="h-12 w-auto" />
         </a>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+
+        <!-- Botón hamburguesa (visible en móviles) -->
+        <button
+          class="text-white md:hidden block focus:outline-none"
+          id="navbar-toggle"
+        >
+          <!-- Icono hamburguesa -->
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Menú a la derecha -->
+        <ul
+          id="navbar-menu"
+          class="hidden md:flex md:items-center space-x-6 text-white"
+        >
+          <li>
+            <a href="index.html" class="hover:text-red-500 transition-colors"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="servicios.html"
+              class="hover:text-red-500 transition-colors"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a href="nosotros.html" class="hover:text-red-500 transition-colors"
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a href="contacto.html" class="hover:text-red-500 transition-colors"
+              >Contacto</a
+            >
+          </li>
           <li>
             <a href="https://wa.me/5491154273657" target="_blank">
-              <img src="images/whatsapp-navbar.png" alt="WhatsApp" />
+              <img
+                src="images/whatsapp-navbar.png"
+                alt="WhatsApp"
+                class="h-6 w-6 hover:opacity-75 transition-opacity"
+              />
             </a>
           </li>
           <li>
@@ -33,11 +85,71 @@
               href="https://www.instagram.com/kronnerlogistica/"
               target="_blank"
             >
-              <img src="images/instagram-navbar (2).png" alt="Instagram" />
+              <img
+                src="images/instagram-navbar (2).png"
+                alt="Instagram"
+                class="h-6 w-6 hover:opacity-75 transition-opacity"
+              />
             </a>
           </li>
         </ul>
       </nav>
+
+      <!-- Menú desplegable (para móviles) -->
+      <div class="md:hidden">
+        <ul id="mobile-menu" class="hidden space-y-4 bg-black p-4 text-white">
+          <li>
+            <a
+              href="index.html"
+              class="block hover:text-red-500 transition-colors"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="servicios.html"
+              class="block hover:text-red-500 transition-colors"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a
+              href="nosotros.html"
+              class="block hover:text-red-500 transition-colors"
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a
+              href="contacto.html"
+              class="block hover:text-red-500 transition-colors"
+              >Contacto</a
+            >
+          </li>
+          <li>
+            <a href="https://wa.me/5491154273657" target="_blank" class="block">
+              <img
+                src="images/whatsapp-navbar.png"
+                alt="WhatsApp"
+                class="h-6 w-6 inline-block hover:opacity-75 transition-opacity"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/kronnerlogistica/"
+              target="_blank"
+              class="block"
+            >
+              <img
+                src="images/instagram-navbar (2).png"
+                alt="Instagram"
+                class="h-6 w-6 inline-block hover:opacity-75 transition-opacity"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <div class="bg-black text-white p-8">
@@ -125,80 +237,53 @@
     </div>
 
     <!-- Footer corregido -->
-    <footer class="bg-black text-white py-5">
-      <div
-        class="bg-black container mx-auto flex flex-col md:flex-row justify-between"
-      >
-        <!-- Logo y descripción, con ajuste para el texto abajo del logo -->
-        <div class="mb-6 md:mb-0 flex flex-col items-start">
-          <img
-            src="images/logo-mas-chico.png"
-            alt="Your Custom Logo"
-            class="h-10 mb-2"
-          />
-          <p class="text-gray-400">
-            Kronner es tu aliado confiable en soluciones de mensajería y
-            logística
-          </p>
-        </div>
+<footer class="bg-black text-white py-5">
+  <div class="bg-black container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start">
+    <!-- Logo y descripción, centrado en dispositivos pequeños -->
+    <div class="mb-6 md:mb-0 flex flex-col items-center md:items-start text-center md:text-left">
+      <img src="images/logo-mas-chico.png" alt="Your Custom Logo" class="h-10 mb-2" />
+      <p class="text-gray-400">
+        Kronner es tu aliado confiable en soluciones de mensajería y logística.
+        
+      </p>
+    </div>
 
-        <!-- Servicios -->
-        <div class="mb-6 md:mb-0">
-          <h5 class="font-bold mb-2">Servicios</h5>
-          <ul>
-            <li>
-              <a href="servicios.html" class="text-gray-400 hover:text-white"
-                >Mercado Envío Flex</a
-              >
-            </li>
-            <li>
-              <a href="servicios.html" class="text-gray-400 hover:text-white"
-                >Envíos eCommerce</a
-              >
-            </li>
-            <li>
-              <a href="servicios.html" class="text-gray-400 hover:text-white"
-                >Servicio de Mensajería</a
-              >
-            </li>
-          </ul>
-        </div>
+    <!-- Servicios -->
+    <div class="mb-6 md:mb-0 text-center md:text-left">
+      <h5 class="font-bold mb-2">Servicios</h5>
+      <ul>
+        <li>
+          <a href="servicios.html" class="text-gray-400 hover:text-white">Mercado Envío Flex</a>
+        </li>
+        <li>
+          <a href="servicios.html" class="text-gray-400 hover:text-white">Envíos eCommerce</a>
+        </li>
+        <li>
+          <a href="servicios.html" class="text-gray-400 hover:text-white">Servicio de Mensajería</a>
+        </li>
+      </ul>
+    </div>
 
-        <!-- Contacto -->
-        <div class="mb-6 md:mb-0">
-          <h5 class="font-bold mb-2">Contacto</h5>
-          <ul>
-            <li>
-              <a
-                href="https://wa.me/5491154273657"
-                target="_blank"
-                class="flex items-center space-x-2"
-              >
-                <img
-                  src="images/whatsapp-navbar.png"
-                  alt="WhatsApp Logo"
-                  class="h-6 w-6"
-                />
-                <span class="text-white">WhatsApp</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/kronnerlogistica/"
-                target="_blank"
-                class="flex items-center space-x-2"
-              >
-                <img
-                  src="images/instagram-navbar (2).png"
-                  alt="Instagram Logo"
-                  class="h-6 w-6"
-                />
-                <span class="text-white">Instagram</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <!-- Contacto -->
+    <div class="text-center md:text-left">
+      <h5 class="font-bold mb-2">Contacto</h5>
+      <ul>
+        <li>
+          <a href="https://wa.me/5491154273657" target="_blank" class="flex justify-center md:justify-start items-center space-x-2">
+            <img src="images/whatsapp-navbar.png" alt="WhatsApp Logo" class="h-6 w-6" />
+            <span class="text-white">WhatsApp</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/kronnerlogistica/" target="_blank" class="flex justify-center md:justify-start items-center space-x-2">
+            <img src="images/instagram-navbar (2).png" alt="Instagram Logo" class="h-6 w-6" />
+            <span class="text-white">Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
       <!-- Botón de WhatsApp -->
       <a
         href="https://wa.me/+5491154273657"
@@ -211,5 +296,13 @@
     <footer class="bg-black">
       <p>&copy; 2024 Logistica Kronner. Todos los derechos reservados.</p>
     </footer>
+    <script>
+      const toggleButton = document.getElementById("navbar-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      toggleButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>

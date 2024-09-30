@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Página Web</title>
+    <title>Servicios - Kronner</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="/images/Imagen de WhatsApp 2024-09-19 a las 10.35.37_2a282437.jpg"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
       rel="stylesheet"
@@ -13,22 +18,69 @@
   </head>
   <body>
     <!-- Encabezado y barra de navegación -->
-    <header>
-      <nav>
-        <a
-          href="index.html"
-          class="block transition-transform duration-300 hover:scale-105"
-        >
-          <img src="images/logo-mas-chico.png" alt="Logo" class="logo" />
+    <header class="bg-black fixed w-full z-20">
+      <nav class="bg-black mx-auto flex justify-between items-center p-4">
+        <!-- Logo a la izquierda -->
+        <a href="index.html" class="flex-shrink-0">
+          <img src="images/logo-mas-chico.png" alt="Logo" class="h-12 w-auto" />
         </a>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+
+        <!-- Botón hamburguesa (visible en móviles) -->
+        <button
+          class="text-white md:hidden block focus:outline-none"
+          id="navbar-toggle"
+        >
+          <!-- Icono hamburguesa -->
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Menú a la derecha -->
+        <ul
+          id="navbar-menu"
+          class="hidden md:flex md:items-center space-x-6 text-white"
+        >
+          <li>
+            <a href="index.html" class="hover:text-red-500 transition-colors"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="servicios.html"
+              class="hover:text-red-500 transition-colors"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a href="nosotros.html" class="hover:text-red-500 transition-colors"
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a href="contacto.html" class="hover:text-red-500 transition-colors"
+              >Contacto</a
+            >
+          </li>
           <li>
             <a href="https://wa.me/5491154273657" target="_blank">
-              <img src="images/whatsapp-navbar.png" alt="WhatsApp" />
+              <img
+                src="images/whatsapp-navbar.png"
+                alt="WhatsApp"
+                class="h-6 w-6 hover:opacity-75 transition-opacity"
+              />
             </a>
           </li>
           <li>
@@ -36,106 +88,175 @@
               href="https://www.instagram.com/kronnerlogistica/"
               target="_blank"
             >
-              <img src="images/instagram-navbar (2).png" alt="Instagram" />
+              <img
+                src="images/instagram-navbar (2).png"
+                alt="Instagram"
+                class="h-6 w-6 hover:opacity-75 transition-opacity"
+              />
             </a>
           </li>
         </ul>
       </nav>
+
+      <!-- Menú desplegable (para móviles) -->
+      <div class="md:hidden">
+        <ul id="mobile-menu" class="hidden space-y-4 bg-black p-4 text-white">
+          <li>
+            <a
+              href="index.html"
+              class="block hover:text-red-500 transition-colors"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="servicios.html"
+              class="block hover:text-red-500 transition-colors"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a
+              href="nosotros.html"
+              class="block hover:text-red-500 transition-colors"
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a
+              href="contacto.html"
+              class="block hover:text-red-500 transition-colors"
+              >Contacto</a
+            >
+          </li>
+          <li>
+            <a href="https://wa.me/5491154273657" target="_blank" class="block">
+              <img
+                src="images/whatsapp-navbar.png"
+                alt="WhatsApp"
+                class="h-6 w-6 inline-block hover:opacity-75 transition-opacity"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/kronnerlogistica/"
+              target="_blank"
+              class="block"
+            >
+              <img
+                src="images/instagram-navbar (2).png"
+                alt="Instagram"
+                class="h-6 w-6 inline-block hover:opacity-75 transition-opacity"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
 
-    <section class="portada">
-      <div class="portada-conteiner">
-        <h1>Nuestros Servicios</h1>
-        <p>Envíos rápidos y flexibles, tanto en CABA como en el GBA.</p>
+    <!-- Sección con imagen de portada y texto centrado -->
+    <section class="relative w-full h-screen pt-16">
+      <!-- Imagen de fondo que cubre toda la pantalla -->
+      <img
+        src="./images/servicioportada.jpg"
+        alt="Portada"
+        class="w-full h-full object-cover"
+      />
+      <!-- Contenedor del texto, centrado sobre la imagen -->
+      <div
+        class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white bg-black bg-opacity-50"
+      >
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+          Nuestros Servicios
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-center">
+          Envíos rápidos y flexibles, tanto en CABA como en el GBA.
+        </p>
       </div>
     </section>
 
-    <div class="flex flex-col md:flex-row items-center p-6 bg-background">
+    <!-- Secciones de servicio -->
+    <div
+      class="flex flex-col md:flex-row items-center p-4 md:p-6 bg-background"
+    >
       <div class="md:w-1/2 p-4">
-        <h2 class="text-2xl font-bold text-primary text-red-500">
+        <h2 class="text-xl sm:text-2xl font-bold text-primary text-red-500">
           Mercado Envío Flex
         </h2>
-        <p class="mt-2 text-muted-foreground">
+        <p class="mt-2 text-sm sm:text-base text-muted-foreground">
           Somos especialistas en Mercado Envío Flex, gestionamos tus envíos en
           el día para que tus ventas en Mercado Libre lleguen rápido y sin
-          complicaciones. Nuestra flota está siempre lista para asegurar que
-          cumplas con las entregas en tiempo récord, mejorando tu reputación
-          como vendedor.
+          complicaciones.
         </p>
       </div>
       <div class="md:w-1/2">
         <img
-          aria-hidden="true"
-          alt="Kronner logistics"
           src="images/ServicioUno.png"
-          class="w-[950px] h-[600px]"
+          alt="Kronner logistics"
+          class="w-full h-auto max-w-md md:max-w-none mx-auto"
         />
       </div>
     </div>
 
-    <div class="flex flex-col md:flex-row items-center p-6 bg-background">
+    <div
+      class="flex flex-col md:flex-row items-center p-4 md:p-6 bg-background"
+    >
       <div class="md:w-1/2 p-4">
-        <h2 class="text-2xl font-bold text-primary text-red-500">
+        <h2 class="text-xl sm:text-2xl font-bold text-primary text-red-500">
           Envíos eCommerce
         </h2>
-        <p class="mt-2 text-muted-foreground">
+        <p class="mt-2 text-sm sm:text-base text-muted-foreground">
           Ofrecemos soluciones logísticas para eCommerce. Realizamos la gestión
-          integral de tus pedidos, desde la recogida en depósito hasta la
-          entrega en manos de tus clientes. Ideal para tiendas online que
-          necesitan un aliado confiable para manejar sus despachos en CABA y
-          GBA.
+          integral de tus pedidos.
         </p>
       </div>
       <div class="md:w-1/2">
         <img
-          aria-hidden="true"
-          alt="Kronner logistics"
           src="images/ServicioDos.png"
-          class="w-[950px] h-[600px]"
-        />
-      </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row items-center p-6 bg-background">
-      <div class="md:w-1/2 p-4">
-        <h2 class="text-2xl font-bold text-primary text-red-500">
-          Servicio de Mensajería
-        </h2>
-        <p class="mt-2 text-muted-foreground">
-          Brindamos un servicio de mensajería ágil y eficiente. Ya sea para
-          trasladar documentos, gestionar trámites o hacer cobranzas, contamos
-          con motos y personal capacitado para resolver tus necesidades en el
-          menor tiempo posible.
-        </p>
-      </div>
-      <div class="md:w-1/2">
-        <img
-          aria-hidden="true"
           alt="Kronner logistics"
-          src="images/ServicioCuatro.png"
-          class="w-[950px] h-[600px]"
+          class="w-full h-auto max-w-md md:max-w-none mx-auto"
         />
       </div>
     </div>
 
-    <div class="flex flex-col md:flex-row items-center p-6 bg-background">
+    <div
+    class="flex flex-col md:flex-row items-center p-4 md:p-6 bg-background"
+  >
+    <div class="md:w-1/2 p-4">
+      <h2 class="text-xl sm:text-2xl font-bold text-primary text-red-500">
+        Servicio de Mensajería
+      </h2>
+      <p class="mt-2 text-sm sm:text-base text-muted-foreground">
+        Brindamos un servicio de mensajería ágil y eficiente. Contamos con motos y personal capacitado.
+      </p>
+    </div>
+    <div class="md:w-1/2">
+      <img
+        src="images/ServicioCuatro.png"
+        alt="Kronner logistics"
+        class="w-full h-auto max-w-md md:max-w-none mx-auto"
+      />
+    </div>
+  </div>
+
+    <div
+      class="flex flex-col md:flex-row items-center p-4 md:p-6 bg-background"
+    >
       <div class="md:w-1/2 p-4">
-        <h2 class="text-2xl font-bold text-primary text-red-500">
+        <h2 class="text-xl sm:text-2xl font-bold text-primary text-red-500">
           Fletes y Mudanzas
         </h2>
-        <p class="mt-2 text-muted-foreground">
-          Nos adaptamos a tus necesidades de transporte. Ofrecemos fletes y
-          mudanzas para empresas o particulares, con servicios de carga y
-          descarga incluidos. Ya sea un pequeño traslado o una mudanza completa,
-          te garantizamos un servicio seguro y puntual.
+        <p class="mt-2 text-sm sm:text-base text-muted-foreground">
+          Nos adaptamos a tus necesidades de transporte, ofreciendo fletes y
+          mudanzas seguras y puntuales.
         </p>
       </div>
       <div class="md:w-1/2">
         <img
-          aria-hidden="true"
-          alt="Kronner logistics"
           src="images/ServicioTres.png"
-          class="w-[950px] h-[600px]"
+          alt="Kronner logistics"
+          class="w-full h-auto max-w-md md:max-w-none mx-auto"
         />
       </div>
     </div>
@@ -149,81 +270,55 @@
       <img src="images/whatsapp.png" alt="WhatsApp" />
     </a>
 
-    <!-- Footer corregido -->
-    <footer class="bg-black text-white py-5">
-      <div
-        class="bg-black container mx-auto flex flex-col md:flex-row justify-between"
-      >
-        <!-- Logo y descripción, con ajuste para el texto abajo del logo -->
-        <div class="mb-6 md:mb-0 flex flex-col items-start">
-          <img
-            src="images/logo-mas-chico.png"
-            alt="Your Custom Logo"
-            class="h-10 mb-2"
-          />
-          <p class="text-gray-400">
-            Kronner es tu aliado confiable en soluciones de mensajería y
-            logística
-          </p>
-        </div>
+  <!-- Footer corregido -->
+<footer class="bg-black text-white py-5">
+  <div class="bg-black container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start">
+    <!-- Logo y descripción, centrado en dispositivos pequeños -->
+    <div class="mb-6 md:mb-0 flex flex-col items-center md:items-start text-center md:text-left">
+      <img src="images/logo-mas-chico.png" alt="Your Custom Logo" class="h-10 mb-2" />
+      <p class="text-gray-400">
+        Kronner es tu aliado confiable en soluciones de mensajería y logística.
+        
+      </p>
+    </div>
 
-        <!-- Servicios -->
-        <div class="mb-6 md:mb-0">
-          <h5 class="font-bold mb-2">Servicios</h5>
-          <ul>
-            <li>
-              <a href="servicios.html" class="text-gray-400 hover:text-white"
-                >Mercado Envío Flex</a
-              >
-            </li>
-            <li>
-              <a href="servicios.html" class="text-gray-400 hover:text-white"
-                >Envíos eCommerce</a
-              >
-            </li>
-            <li>
-              <a href="servicios.html" class="text-gray-400 hover:text-white"
-                >Servicio de Mensajería</a
-              >
-            </li>
-          </ul>
-        </div>
+    <!-- Servicios -->
+    <div class="mb-6 md:mb-0 text-center md:text-left">
+      <h5 class="font-bold mb-2">Servicios</h5>
+      <ul>
+        <li>
+          <a href="servicios.html" class="text-gray-400 hover:text-white">Mercado Envío Flex</a>
+        </li>
+        <li>
+          <a href="servicios.html" class="text-gray-400 hover:text-white">Envíos eCommerce</a>
+        </li>
+        <li>
+          <a href="servicios.html" class="text-gray-400 hover:text-white">Servicio de Mensajería</a>
+        </li>
+      </ul>
+    </div>
 
-        <!-- Contacto -->
-        <div class="mb-6 md:mb-0">
-          <h5 class="font-bold mb-2">Contacto</h5>
-          <ul>
-            <li>
-              <a
-                href="https://wa.me/5491154273657"
-                target="_blank"
-                class="flex items-center space-x-2"
-              >
-                <img
-                  src="images/whatsapp-navbar.png"
-                  alt="WhatsApp Logo"
-                  class="h-6 w-6"
-                />
-                <span class="text-white">WhatsApp</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/kronnerlogistica/"
-                target="_blank"
-                class="flex items-center space-x-2"
-              >
-                <img
-                  src="images/instagram-navbar (2).png"
-                  alt="Instagram Logo"
-                  class="h-6 w-6"
-                />
-                <span class="text-white">Instagram</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <!-- Contacto -->
+    <div class="text-center md:text-left">
+      <h5 class="font-bold mb-2">Contacto</h5>
+      <ul>
+        <li>
+          <a href="https://wa.me/5491154273657" target="_blank" class="flex justify-center md:justify-start items-center space-x-2">
+            <img src="images/whatsapp-navbar.png" alt="WhatsApp Logo" class="h-6 w-6" />
+            <span class="text-white">WhatsApp</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/kronnerlogistica/" target="_blank" class="flex justify-center md:justify-start items-center space-x-2">
+            <img src="images/instagram-navbar (2).png" alt="Instagram Logo" class="h-6 w-6" />
+            <span class="text-white">Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
       <!-- Botón de WhatsApp -->
       <a
         href="https://wa.me/+5491154273657"
@@ -236,5 +331,13 @@
     <footer class="bg-black">
       <p>&copy; 2024 Logistica Kronner. Todos los derechos reservados.</p>
     </footer>
+    <script>
+      const toggleButton = document.getElementById("navbar-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      toggleButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
