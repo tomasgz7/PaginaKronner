@@ -6,10 +6,10 @@ inform.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
 
   // Capturar los valores de los campos del formulario
-  const name = document.getElementById("nombre").value;
+  const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
-  const phone = document.getElementById("telefono").value;
-  const message = document.getElementById("mensaje").value;
+  const phone = document.getElementById("phone").value;
+  const message = document.getElementById("message").value;
 
   // Crear el objeto con los datos del formulario
   const formData = {
@@ -18,10 +18,11 @@ inform.addEventListener("submit", function (event) {
     phone: phone,
     message: message,
   };
+  // Verifica que los datos estén correctos
+  console.log("Datos a enviar:", formData);
 
   // Enviar los datos al backend utilizando fetch
   fetch("http://localhost:3000/send-email", {
-    mode: "no-cors",
     method: "POST",
     headers: {
       "Content-Type": "application/json",
