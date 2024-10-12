@@ -417,6 +417,17 @@
         mobileMenu.classList.toggle("hidden");
       });
     </script>
+    <script>
+      document.getElementById('inform').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario por defecto (para manejarlo)
+        
+        // Aquí podrías manejar el envío del formulario o mostrar un mensaje de éxito, si es necesario.
+        // Por ejemplo: alert("Formulario enviado!");
+    
+        // Resetea el formulario
+        this.reset();
+      });
+    </script>
     <script src="app.js"></script>
   </body>
 </html>

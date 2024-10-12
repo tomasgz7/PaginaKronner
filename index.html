@@ -389,6 +389,12 @@
       </div>
       <div class="md:w-1/2 mt-4 md:mt-0 md:pl-6">
         <h2 class="text-white text-xl font-semibold mb-4">Contacto</h2>
+
+         <!-- Mensaje de éxito -->
+    <div id="success-message" class="hidden text-green-500 text-sm mb-4">
+      ¡Tu mensaje se ha enviado correctamente!
+    </div>
+
         <form id="inform">
           <div class="mb-4">
             <label
@@ -520,6 +526,28 @@
     </footer>
 
     <!-- Scripts -->
+    <script>
+      document.getElementById('inform').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario por defecto
+    
+        // Mostrar el mensaje de éxito
+        const successMessage = document.getElementById('success-message');
+        successMessage.classList.remove('hidden'); // Mostrar mensaje
+        successMessage.classList.add('opacity-100'); // Asegurar que es visible
+    
+        // Resetea el formulario
+        this.reset();
+    
+        // Desaparecer el mensaje después de 3 segundos
+        setTimeout(function() {
+          successMessage.classList.add('opacity-0'); // Añade la clase para hacer que desaparezca con transición
+          setTimeout(function() {
+            successMessage.classList.add('hidden'); // Esconde completamente el mensaje después de la transición
+            successMessage.classList.remove('opacity-0', 'opacity-100'); // Resetea las clases de opacidad
+          }, 1000); // 1 segundo de espera antes de esconder el mensaje (después de la transición)
+        }, 3000); // El mensaje estará visible durante 3 segundos
+      });
+    </script>
     <script>
       const toggleButton = document.getElementById("navbar-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
