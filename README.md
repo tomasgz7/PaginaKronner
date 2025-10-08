@@ -35,9 +35,15 @@ The main objective was to **deliver a professional and user-friendly interface**
 
 👉 [View the live prototype](https://kronner-logistica-prototipo.netlify.app/)
 
----
+## 👥 Contributors
 
-## 💻 How to Run Locally
+Thanks to everyone who contributed to this project:
+
+| Name | Role | GitHub |
+|------|------|--------|
+| Tomas Guzman | Frontend Developer / Project Creator | [@tomasgz7](https://github.com/tomasgz7) |
+| Matías Maizares | Backend Collaborator – Helped with backend integration and email form testing | [@matiasmaizares](https://github.com/matiasmaizares) |
+
 
 1. **Clone the repository**  
    ```bash
