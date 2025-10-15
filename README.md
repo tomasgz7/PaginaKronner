@@ -1,51 +1,61 @@
-# 📦 Kronner Logística – Prototype
+# 📦 Kronner Logística – Prototipo
 
-**Kronner Logística** is a prototype website I developed for a **messaging and delivery service**.  
-The project was built entirely with **HTML**, **CSS**, and **JavaScript**, focusing on a clean, modern, and responsive design.
+**Kronner Logística** es un sitio web prototipo que desarrollé para un **servicio de mensajería y envíos**.  
+El proyecto fue construido íntegramente con **HTML**, **CSS** y **JavaScript**, priorizando un diseño **limpio, moderno y totalmente responsivo**.
 
-The site includes a **fully functional contact form**, powered by a **Node.js + Express** backend, allowing users to send requests and inquiries dynamically.  
-Although this is a prototype version, it served as the **foundation for the final site delivered to the client**, with minor content and style adjustments.
-
----
-
-## 🚀 Features
-
-- ✅ Responsive layout for different devices  
-- 📝 Functional contact form connected to a Node.js + Express server  
-- 🎨 Clean and modern UI with custom CSS styling  
-- 🌐 Lightweight structure focused on performance
+El sitio incluye un **formulario de contacto funcional**, alimentado por un backend en **Node.js + Express**, que permite a los usuarios enviar solicitudes e inquietudes de forma dinámica.  
+Aunque se trata de una versión prototipo, sirvió como **base técnica para el sitio final entregado al cliente**, con pequeños ajustes de contenido y estilo.
 
 ---
 
-## 🛠️ Technologies Used
+## 🚀 Funcionalidades
+
+- ✅ Diseño responsivo adaptable a distintos dispositivos  
+- 📝 Formulario de contacto funcional conectado a un servidor Node.js + Express  
+- 🎨 Interfaz limpia y moderna con estilos CSS personalizados  
+- 🌐 Estructura liviana enfocada en rendimiento  
+
+---
+
+## 🛠️ Tecnologías utilizadas
 
 - **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** Node.js, Express
+- **Backend:** Node.js, Express  
 
 ---
 
-## 📝 Project Description
+## 📝 Descripción del proyecto
 
-This project was created as a functional prototype to demonstrate the core structure and interactions of a real logistics service website.  
-The main objective was to **deliver a professional and user-friendly interface** that effectively communicates reliability and speed to potential clients.
+Este proyecto fue creado como un **prototipo funcional** para demostrar la estructura y las interacciones principales de un sitio real de logística.  
+El objetivo fue ofrecer una **interfaz profesional, intuitiva y confiable**, que refleje eficiencia y claridad en los servicios de mensajería y entrega.
 
 ---
 
-## 🌍 Live Demo
+## 🌍 Demo en línea
 
-👉 [View the live prototype](https://kronner-logistica-prototipo.netlify.app/)
+👉 [Ver el prototipo en vivo](https://kronner-logistica-prototipo.netlify.app/)
 
-## 👥 Contributors
+---
 
-Thanks to everyone who contributed to this project:
+## 👥 Colaboradores
 
-| Name | Role | GitHub |
-|------|------|--------|
-| Tomas Guzman | Frontend Developer / Project Creator | [@tomasgz7](https://github.com/tomasgz7) |
-| Matías Maizares | Backend Collaborator – Helped with backend integration and email form testing | [@matiasmaizares](https://github.com/matiasmaizares) |
+Agradecimientos a quienes colaboraron en este proyecto:
 
+| Nombre | Rol | GitHub |
+|--------|------|--------|
+| **Tomas Guzman** | Desarrollador Frontend / Creador del proyecto | [@tomasgz7](https://github.com/tomasgz7) |
+| **Matías Maizares** | Colaborador Backend — Integración y pruebas del formulario de contacto | [@matiasmaizares](https://github.com/matiasmaizares) |
 
-1. **Clone the repository**  
+---
+
+## ⚙️ Cómo clonar y ejecutar el proyecto
+
+1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/<your-username>/kronner-logistica-prototype.git
-   cd kronner-logistica-prototype
+   git clone https://github.com/tomasgz7/PaginaKronner.git
+   cd PaginaKronner
+
+<p align="center">
+  ⭐ <i>Este prototipo resume mi forma de trabajar: código simple, claro y con propósito.<br>
+  Cada detalle está pensado para que funcione, se mantenga y escale cuando sea necesario.</i>
+</p>
